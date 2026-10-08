@@ -20,3 +20,10 @@
   - Ticket campaigns optimize on that custom conversion, never on plain Purchase.
   - Audiences built from the ticket pixel use the same filter, unless the goal is deliberately "local ticket buyers at this venue".
 - The current Ticketweb show (Oct 17) stays on the merch pixel; the owner decided not to switch it this close to the date. Every show from here on uses the ticket pixel.
+
+## Ad economics (confirmed by owner 2026-10-08)
+
+- Hoodies sell at $55; free shipping on hoodie orders; shipping label ≈ $6; payment fees ≈ 2.9% + $0.30.
+- Full product cost: tie-dye hoodie $22.05; solid hoodies $13.05.
+- Break-even cost per purchase: tie-dye ≈ $25 full price / ≈ $20 with the 10%-off code; solid hoodies ≈ $34 / ≈ $29.
+- Budget rule for the hoodie CBO: 4-day cost per purchase under $22 → raise budget 20%; $22–28 → hold and add creative; over $28 → no raise, new creative first.
