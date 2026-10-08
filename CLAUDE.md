@@ -16,4 +16,4 @@
 - Web GTM: GTM-WPLM7JHB. Server GTM: GTM-NR7CDFQN (Stape, custom domain wwpiwhdy.therollinrust.com).
 - Ticketing sites can only send browser events (we don't control them). That's the one accepted exception to the browser + server rule. Tracking we build ourselves for tickets (Tour page clicks) still goes browser + server through Stape.
 - Give venues the **ticket** pixel ID, never the merch one, and only if their platform can add it to our event alone (not account-wide).
-- As of 2026-10-08, Ticketweb still sends to the merch pixel. Moving it to the ticket pixel is pending; expect merch Purchase counts to drop slightly when it moves.
+- The current Ticketweb show (Oct 17) stays on the merch pixel; the owner decided not to switch it this close to the date. Every show from here on uses the ticket pixel.
