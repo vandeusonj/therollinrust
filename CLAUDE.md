@@ -10,6 +10,10 @@
 ## Setup
 
 - Shopify store: therollinrust.com
-- Meta dataset/pixel: "The Rollin' Rust" (604708470177185). Ignore the old "The Rollin' Rust - Store" pixel.
+- Two Meta pixels, kept strictly separate:
+  - **Merch:** "The Rollin' Rust" (604708470177185). Only merch shopping on therollinrust.com. All hoodie/merch campaigns optimize on this one.
+  - **Tickets:** "The Rollin' Rust - Tickets" (1401516072094248). Renamed from "The Rollin' Rust - Store" on 2026-10-08. Only ticket activity: ticketing sites (Ticketweb, venue platforms like ThunderTix) and the Tour page "Tickets"/RSVP clicks. Never put it on the store or checkout.
 - Web GTM: GTM-WPLM7JHB. Server GTM: GTM-NR7CDFQN (Stape, custom domain wwpiwhdy.therollinrust.com).
-- Ticket sales from ticketweb.com send browser-only Purchase and InitiateCheckout to the same pixel. That's expected, not a bug.
+- Ticketing sites can only send browser events (we don't control them). That's the one accepted exception to the browser + server rule. Tracking we build ourselves for tickets (Tour page clicks) still goes browser + server through Stape.
+- Give venues the **ticket** pixel ID, never the merch one, and only if their platform can add it to our event alone (not account-wide).
+- As of 2026-10-08, Ticketweb still sends to the merch pixel. Moving it to the ticket pixel is pending; expect merch Purchase counts to drop slightly when it moves.
