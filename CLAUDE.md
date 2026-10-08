@@ -15,5 +15,8 @@
   - **Tickets:** "The Rollin' Rust - Tickets" (1401516072094248). Renamed from "The Rollin' Rust - Store" on 2026-10-08. Only ticket activity: ticketing sites (Ticketweb, venue platforms like ThunderTix) and the Tour page "Tickets"/RSVP clicks. Never put it on the store or checkout.
 - Web GTM: GTM-WPLM7JHB. Server GTM: GTM-NR7CDFQN (Stape, custom domain wwpiwhdy.therollinrust.com).
 - Ticketing sites can only send browser events (we don't control them). That's the one accepted exception to the browser + server rule. Tracking we build ourselves for tickets (Tour page clicks) still goes browser + server through Stape.
-- Give venues the **ticket** pixel ID, never the merch one, and only if their platform can add it to our event alone (not account-wide).
+- Give venues the **ticket** pixel ID, never the merch one. Account-wide on the venue's platform is OK (owner decision 2026-10-08), with these conditions:
+  - Isolate our show with a custom conversion. Build it only after checking what the venue's real Purchase events contain (URL, content IDs/names). Don't assume the confirmation URL carries the event ID.
+  - Ticket campaigns optimize on that custom conversion, never on plain Purchase.
+  - Audiences built from the ticket pixel use the same filter, unless the goal is deliberately "local ticket buyers at this venue".
 - The current Ticketweb show (Oct 17) stays on the merch pixel; the owner decided not to switch it this close to the date. Every show from here on uses the ticket pixel.
